@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head th:replace="fragments/common::header">
+        <title>ログイン画面</title>
+    </head>
+    <body class="container">
+        <p th:if="${param.error}">
+            IDまたはパスワードが間違っています。
+        </p>
+
+        <p th:if="${param.logout}">
+            ログアウトしました。
+        </p>
+
+        <form th:action="@{/login}" method="post">
+            <div class="input-group mb-3"><label> ユーザー名 : <input type="text" name="username"/> </label></div>
+            <div class="input-group mb-3"><label> パスワード: <input type="password" name="password"/> </label></div>
+            <div class="input-group mb-3"><input type="submit" value="ログイン"/></div>
+        </form>
+
+        
+    </body>
+<footer th:replace="fragments/common::footer">
+    <p>
+        <a th:href="@{/}">HOME</a>
+    </p>
+</footer>
+</html>

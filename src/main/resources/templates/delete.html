@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head th:replace="fragments/common::header">
+		<!-- <meta charset="UTF-8"> -->
+    <title>削除画面</title>
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+</head>
+<body class="container">
+    <header>
+        <h1>削除画面</h1>
+    </header>
+
+	<main>
+        <p>
+            アカウントを削除します。
+        </p>
+
+		<form action="#" th:action="@{/delete}" th:object="${account}" method="post">
+			<table class="table table-dark table-hover">
+				<tr>
+					<td>ID:<input type="hidden" th:field="*{id}"></td>
+					<td th:text="*{id}"></td>
+				</tr>
+				<tr>
+					<td>名前:<input type="hidden" th:field="*{name}"></td>
+					<td th:text="*{name}"></td>
+				</tr>
+				<tr>
+					<td>クラス:<input type="hidden" th:field="*{className}"></td>
+					<td th:text="*{className}"></td>
+				</tr>
+				<tr>
+					<td>電話番号:<input type="hidden" th:field="*{tel}"></td>
+					<td th:text="*{tel}"></td>
+				</tr>
+				<tr>
+					<td>住所:<input type="hidden" th:field="*{address}"></td>
+					<td th:text="*{address}"></td>
+				</tr>
+
+				<tr>
+					<td colspan="2" align="center">
+                        <button type="submit">削除</button>
+                    </td>
+				</tr>
+			</table>
+		</form>
+
+	</main>
+
+    <footer th:replace="fragments/common::footer">
+    </footer>
+</body>
+</html>

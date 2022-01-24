@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Kimatsu2021Application<kimatsu2021>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "jp.ac.ccmc._2x.kimatsu2021.Kimatsu2021Application",
+            "projectName": "kimatsu2021",
+            "args": ""
+        }
+    ]
+}
